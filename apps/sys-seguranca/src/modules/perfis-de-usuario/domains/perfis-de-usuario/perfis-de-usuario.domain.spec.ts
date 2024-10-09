@@ -1,12 +1,13 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PerfisDeUsuarioDomain } from './perfis-de-usuario.domain';
+import { MetadadosDto } from 'libs/shared/data/dtos/Metadados';
 
 describe('PerfisDeUsuarioDomain', () => {
   let service: PerfisDeUsuarioDomain;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [PerfisDeUsuarioDomain],
+      providers: [PerfisDeUsuarioDomain, MetadadosDto],
     }).overrideProvider(PerfisDeUsuarioDomain).useValue({
       listar: jest.fn(),
       remover: jest.fn(),
