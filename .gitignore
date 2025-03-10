@@ -2,7 +2,8 @@
 /dist
 /node_modules
 /build
-
+projeto-ai-assistant
+apps/*/node_modules
 # Logs
 logs
 *.log
